@@ -23,8 +23,8 @@ for i in range(len(array)):
 bubbleSort = (inputArr) => {
     let n = inputArr.length;
     for (let i=0; i<n; i++){
-        for (let j=0; j<(n-i-1); j++){
-            if(inputArr[j]>inputArr[j+1]){
+        for (let j=0; j < (n-i-1); j++){
+            if(inputArr[j] > inputArr[j+1]){
                 let tmp = inputArr[j];
                 inputArr[j] = inputArr[j + 1];
                 inputArr[j + 1] = tmp;
@@ -61,7 +61,7 @@ void bubbleSort(int arr[], int n){
 
 void printArray(int arr[], int size){
     int i;
-    for (i = 0; i<size; i++)
+    for (i = 0; i < size; i++)
         cout << arr[i] << " ";
     cout << endl;
 }
@@ -73,5 +73,29 @@ int main(){
     cout << "Sorted array: \n";
     printArray(arr, n);
     return 0;
+}
+```
+
+## Go
+```go
+package main
+
+import "fmt"
+
+func BubbleSort(numbers []int){
+    n := len(numbers)
+    for i:=0;  i < n; i++{
+        for j:=0; j < n-i-1; j++{
+            if numbers[j] > numbers[j+1]{
+                numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
+            }
+        }
+    }
+}
+
+func main(){
+    array := []int {190, 1200, 1, 2, 4, 55, 1000, 6, 800}
+    BubbleSort(array)
+    fmt.Println(array)
 }
 ```
